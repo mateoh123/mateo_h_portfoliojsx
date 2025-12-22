@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import WorkModal from "../components/WorkModal";
 import WorkModalContent from "../components/WorkModalContent";
 
-const ButtonPage = () => {
+const WorkPage = () => {
   const [openModalId, setOpenModalId] = useState(null);
 
   const openModal = (id) => {
@@ -75,4 +75,4 @@ const ButtonPage = () => {
   );
 };
 
-export default ButtonPage;
+export default WorkPage;
