@@ -16,7 +16,7 @@ const RecentWork = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-evenly m-4">
+      <div className="flex flex-wrap justify-evenly m-6">
         <WorkCard
           onClick={() => openModal("twentytotenModal")}
           image={require("../work_assets/icons/20to10_icon.avif")}

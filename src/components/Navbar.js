@@ -1,11 +1,9 @@
 import React from "react";
-import cx from "classnames";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Panel from "./Panel";
 
 const Navbar = () => {
-
   return (
     <Panel className="sticky top-0 flex flex-row items-start w-full justify-between bg-stone-950! font-source_san_3 font-bold border-none rounded-none">
       <Link to="/" className="bg-stone-950!">

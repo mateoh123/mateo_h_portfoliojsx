@@ -1,3 +1,5 @@
+
+
 const WorkModal = ({ isOpen, onClose, children, workTitle }) => {
   if (!isOpen) return null;
 

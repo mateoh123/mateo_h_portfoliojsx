@@ -1,11 +1,11 @@
 import React from "react";
-import instagramIcon from "../work_assets/navigationIcons/icons8-instagram-64.png";
-import emailIcon from "../work_assets/navigationIcons/icons8-email-64.png";
-import linkedinIcon from "../work_assets/navigationIcons/icons8-linkedin-64.png";
+import instagramIcon from "../assets/instagramlogo.png";
+import emailIcon from "../assets/emaillogo.png";
+import linkedinIcon from "../assets/linkedinlogo.png";
 
 const Footer = () => {
   return (
-    <div className="py-4 px-4 justify-items-center font-bold font-source_san_3 text-lg">
+    <div className="py-4 px-4 justify-items-center font-bold font-source_san_3 text-xl">
       <h3>Socials</h3>
       <div className="flex gap-4">
         <a
@@ -15,8 +15,8 @@ const Footer = () => {
         >
           <img
             src={instagramIcon}
-            width="64"
-            height="64"
+            width="54"
+            height="54"
             alt="logo-instagram"
             className="hover:scale-125"
           />
@@ -24,8 +24,8 @@ const Footer = () => {
         <a href="mailto:mateoche76@gmail.com" target="_blank" rel="noreferrer">
           <img
             src={emailIcon}
-            width="64"
-            height="64"
+            width="54"
+            height="54"
             alt="logo-email"
             className="hover:scale-125"
           />
@@ -37,8 +37,8 @@ const Footer = () => {
         >
           <img
             src={linkedinIcon}
-            width="64"
-            height="64"
+            width="54"
+            height="54"
             alt="logo-linkedin"
             className="hover:scale-125"
           />

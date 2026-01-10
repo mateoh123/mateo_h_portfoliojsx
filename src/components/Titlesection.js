@@ -1,6 +1,5 @@
 import React from "react";
 import RandomImageContainer from "./RImageContainer";
-// import RandomImageScatter from "./RandomImagesCode";
 
 const TitleSection = ({ title, description }) => {
   return (
@@ -12,7 +11,6 @@ const TitleSection = ({ title, description }) => {
           </h1>
           <p className="text-[2rem] mt-4">{description}</p>
         </div>
-        {/* <RandomImageScatter /> */}
       </RandomImageContainer>
     </div>
   );
