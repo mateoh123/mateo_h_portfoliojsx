@@ -16,6 +16,46 @@ const ModalImageGrid = ({ folder }) => {
       false,
       /\.(png|jpe?g|webp|avif)$/
     ),
+    seafoamPhotos: require.context(
+      "../work_assets/Sea Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    thinkofmePhotos: require.context(
+      "../work_assets/Early Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    soniconavaPhotos: require.context(
+      "../work_assets/Sonicon Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    centralparkwhismyPhotos: require.context(
+      "../work_assets/Central Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    bigcityPhotos: require.context(
+      "../work_assets/Big Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    allysonsvalentinePhotos: require.context(
+      "../work_assets/Valentine Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    doeshestillthinkofmePhotos: require.context(
+      "../work_assets/Does Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
+    thekidsoflaPhotos: require.context(
+      "../work_assets/Kids Photos",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
   };
 
   //using webpacks require.contect you can read through folders and sparse stuff out of them
