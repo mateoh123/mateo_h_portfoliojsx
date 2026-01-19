@@ -56,6 +56,11 @@ const ModalImageGrid = ({ folder }) => {
       false,
       /\.(png|jpe?g|webp|avif)$/
     ),
+    inmymindcodingPhotos: require.context(
+      "../work_assets/In My Mind Coding",
+      false,
+      /\.(png|jpe?g|webp|avif)$/
+    ),
   };
 
   //using webpacks require.contect you can read through folders and sparse stuff out of them

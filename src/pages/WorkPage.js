@@ -2,25 +2,38 @@ import React, { useState } from "react";
 import WorkCard from "../components/WorkCard";
 import DescriptionSection from "../components/DescriptionSection";
 import ModalImageGrid from "../components/ModalImageGrid";
+import ModalVideoGrid from "../components/ModalVideoGrid";
 import SoftwareUsed from "../components/SoftwareUsed";
 
 import cameraSoftware from "../assets/skills_softwares_languages/softwares/canoneossoftware.png";
 import photoshopSoftware from "../assets/skills_softwares_languages/softwares/apsoftware.png";
 import illustratorSoftware from "../assets/skills_softwares_languages/softwares/aisoftware.png";
+import glitchSoftware from "../assets/skills_softwares_languages/softwares/glitchsoftware.png";
+import polycamSoftware from "../assets/skills_softwares_languages/softwares/polycamsoftware.png";
+import blenderSoftware from "../assets/skills_softwares_languages/softwares/blendersoftware.png";
+import unitySoftware from "../assets/skills_softwares_languages/softwares/unitysoftware.png";
+
 import photographySkill from "../assets/skills_softwares_languages/skills/photographyskill.png";
 import creativedirectingSkill from "../assets/skills_softwares_languages/skills/creativedirectingskill.png";
+import threedscanningSkill from "../assets/skills_softwares_languages/skills/3dscanningskill.png";
+import threedmodelingSkill from "../assets/skills_softwares_languages/skills/3dmodelingskill.png";
+import programmingSkill from "../assets/skills_softwares_languages/skills/programmingskill.png";
+
+import htmlLanguage from "../assets/skills_softwares_languages/language/htmllanguage.png";
+import csslLanguage from "../assets/skills_softwares_languages/language/csslanguage.png";
 
 import unselectedcamerafilter from "../assets/categorybadges/whitecamerabadge.png";
 import unselectedcodingfilter from "../assets/categorybadges/whitecodingbadge.png";
 import unselectedcomputerfilter from "../assets/categorybadges/whitecomputerbadge.png";
 import unselectedxrfilter from "../assets/categorybadges/whitexrbadge.png";
 
+import vrAxeThrowingVideo from "../work_assets/VR Axe Throwing/vraxethrowingvideo.mov";
+
 const WorkPage = () => {
   const [openModalId, setOpenModalId] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTags, setActiveTags] = useState([]);
   const [activeSoftware, setActiveSoftware] = useState([]);
-  const softwareOptions = ["Photoshop", "Illustrator", "Camera"];
 
   const tags = [
     { id: "Photography", icon: unselectedcamerafilter },
@@ -37,8 +50,7 @@ const WorkPage = () => {
       date: "February 2025",
       image: require("../work_assets/icons/20to10_icon.avif"),
       badge: require("../assets/categorybadges/camerabadge.png"),
-      tags: ["photography", "collage"],
-      software: ["Photoshop"],
+      tags: ["photography"],
       children: (
         <>
           <ModalImageGrid folder="twentytotenPhotos" />
@@ -95,8 +107,7 @@ const WorkPage = () => {
       date: "November 2024",
       image: require("../work_assets/icons/Lamar_UpClose.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
-      tags: ["political", "design"],
-      software: ["Illustrator"],
+      tags: ["photography"],
       children: (
         <>
           <ModalImageGrid folder="votingiscoolPhotos" />
@@ -148,7 +159,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/Untitled-1.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="acrosstheamtrakPhotos" />
@@ -197,7 +207,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/sea_foam_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="seafoamPhotos" />
@@ -250,7 +259,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/early_morn_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="thinkofmePhotos" />
@@ -297,13 +305,80 @@ const WorkPage = () => {
       ),
     },
     {
+      id: "13",
+      title: "VR Axe Throwing",
+      date: "May 2024",
+      image: require("../work_assets/icons/axe_icon.avif"),
+      badge: require("../assets/categorybadges/xrbadge.png"),
+      tags: ["coding"],
+      children: (
+        <>
+          <ModalVideoGrid video={vrAxeThrowingVideo} />
+          <DescriptionSection
+            tagline="As part of my XR team,"
+            description="we were tasked with developing a video game for the Oculus Meta Quest 3.
+             Collaborating closely, we created an immersive VR axe-throwing game set in the depths of
+              the New York sewers. Utilizing the XR Action Kit for Unity, we integrated key features such
+               as teleportation, score tracking, sound effects, and dynamic visual design to enhance the
+                player experience. This project demonstrates my skills in VR game development, interactive
+                 design, and collaboration to create an engaging, immersive experience."
+          />
+          <SoftwareUsed
+            skills={
+              <>
+                <img
+                  src={programmingSkill}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+                <img
+                  src={threedmodelingSkill}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+                <img
+                  src={programmingSkill}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+              </>
+            }
+            software={
+              <>
+                <img src={unitySoftware} alt="Photography" className="h-16" />
+                <img
+                  src={blenderSoftware}
+                  alt="Blender Software"
+                  className="h-16"
+                />
+                <img
+                  src={polycamSoftware}
+                  alt="Polycam Software"
+                  className="h-16"
+                />
+              </>
+            }
+            language={
+              <>
+                <img src={htmlLanguage} alt="Photography" className="h-16" />
+                <img
+                  src={csslLanguage}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+              </>
+            }
+          />
+        </>
+      ),
+    },
+    {
       id: "6",
       title: "Sonicon Ava",
       date: "May 2024",
       image: require("../work_assets/icons/sonicon_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="soniconavaPhotos" />
@@ -355,7 +430,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/central_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="centralparkwhismyPhotos" />
@@ -408,7 +482,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/sona_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="bigcityPhotos" />
@@ -455,13 +528,80 @@ const WorkPage = () => {
       ),
     },
     {
+      id: "12",
+      title: "In My Mind",
+      date: "March 2024",
+      image: require("../work_assets/icons/my_mind_icon.avif"),
+      badge: require("../assets/categorybadges/xrbadge.png"),
+      tags: ["coding"],
+      children: (
+        <>
+          <ModalImageGrid folder="inmymindcodingPhotos" />
+          <DescriptionSection
+            tagline="First AR Project"
+            description="During a challenging period in my life, I sought 
+          a way to express my personal struggles through a medium I had never fully explored—virtual reality. 
+          Leveraging Glitch's A-Frame library, I developed an immersive VR experience that visualizes the 
+          journey of self-discovery. Using 3D scanning technology, I scanned myself and crafted a surreal, 
+          introspective world that represents the complexities of navigating one's identity and aspirations. 
+          This project showcases my ability to merge innovative technology with storytelling, creating a deeply
+           personal and immersive experience that pushes the boundaries of traditional media."
+          />
+          <SoftwareUsed
+            skills={
+              <>
+                <img
+                  src={threedscanningSkill}
+                  alt="Photography"
+                  className="h-16"
+                />
+                <img
+                  src={threedmodelingSkill}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+              </>
+            }
+            software={
+              <>
+                <img
+                  src={blenderSoftware}
+                  alt="Blender Software"
+                  className="h-16"
+                />
+                <img
+                  src={glitchSoftware}
+                  alt="Glitch Software"
+                  className="h-16"
+                />
+                <img
+                  src={polycamSoftware}
+                  alt="Polycam Software"
+                  className="h-16"
+                />
+              </>
+            }
+            language={
+              <>
+                <img src={htmlLanguage} alt="Photography" className="h-16" />
+                <img
+                  src={csslLanguage}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+              </>
+            }
+          />
+        </>
+      ),
+    },
+    {
       id: "9",
       title: "ALLYSON'S VALENTINE",
       date: "February 2024",
       image: require("../work_assets/icons/valentine_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="allysonsvalentinePhotos" />
@@ -513,7 +653,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/think_icon.avif"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="doeshestillthinkofmePhotos" />
@@ -561,7 +700,6 @@ const WorkPage = () => {
       image: require("../work_assets/icons/kids_icon.webp"),
       badge: require("../assets/categorybadges/camerabadge.png"),
       tags: ["photography"],
-      software: ["Camera"],
       children: (
         <>
           <ModalImageGrid folder="thekidsoflaPhotos" />
