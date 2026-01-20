@@ -3,24 +3,34 @@ import WorkCard from "../components/WorkCard";
 import DescriptionSection from "../components/DescriptionSection";
 import ModalImageGrid from "../components/ModalImageGrid";
 import ModalVideoGrid from "../components/ModalVideoGrid";
+import ModalMiscGrid from "../components/ModalMiscGrid";
+import ModalWebDevGrid from "../components/ModalWebDevGrid";
 import SoftwareUsed from "../components/SoftwareUsed";
 
+import adobepremiereproSoftware from "../assets/skills_softwares_languages/softwares/appsoftware.png";
+import adobeaftereffectsSoftware from "../assets/skills_softwares_languages/softwares/aaesoftware.png";
+import adobephotoshopSoftware from "../assets/skills_softwares_languages/softwares/apsoftware.png";
+import adobeillustratorSoftware from "../assets/skills_softwares_languages/softwares/aisoftware.png";
 import cameraSoftware from "../assets/skills_softwares_languages/softwares/canoneossoftware.png";
 import photoshopSoftware from "../assets/skills_softwares_languages/softwares/apsoftware.png";
 import illustratorSoftware from "../assets/skills_softwares_languages/softwares/aisoftware.png";
 import glitchSoftware from "../assets/skills_softwares_languages/softwares/glitchsoftware.png";
 import polycamSoftware from "../assets/skills_softwares_languages/softwares/polycamsoftware.png";
 import blenderSoftware from "../assets/skills_softwares_languages/softwares/blendersoftware.png";
+import lensstudioSoftware from "../assets/skills_softwares_languages/softwares/lensstudiosoftware.png";
 import unitySoftware from "../assets/skills_softwares_languages/softwares/unitysoftware.png";
+import metaquestSoftware from "../assets/skills_softwares_languages/softwares/moqsoftware.png";
 
 import photographySkill from "../assets/skills_softwares_languages/skills/photographyskill.png";
 import creativedirectingSkill from "../assets/skills_softwares_languages/skills/creativedirectingskill.png";
 import threedscanningSkill from "../assets/skills_softwares_languages/skills/3dscanningskill.png";
 import threedmodelingSkill from "../assets/skills_softwares_languages/skills/3dmodelingskill.png";
 import programmingSkill from "../assets/skills_softwares_languages/skills/programmingskill.png";
+import motiondesignSkill from "../assets/skills_softwares_languages/skills/motiondesignskill.png";
 
 import htmlLanguage from "../assets/skills_softwares_languages/language/htmllanguage.png";
 import csslLanguage from "../assets/skills_softwares_languages/language/csslanguage.png";
+import csharpLanguage from "../assets/skills_softwares_languages/language/csharplanguage.png";
 
 import unselectedcamerafilter from "../assets/categorybadges/whitecamerabadge.png";
 import unselectedcodingfilter from "../assets/categorybadges/whitecodingbadge.png";
@@ -28,6 +38,12 @@ import unselectedcomputerfilter from "../assets/categorybadges/whitecomputerbadg
 import unselectedxrfilter from "../assets/categorybadges/whitexrbadge.png";
 
 import vrAxeThrowingVideo from "../work_assets/VR Axe Throwing/vraxethrowingvideo.mov";
+import arMagazineVideo from "../work_assets/AR Magazine/wiredmagazine.mov";
+import wiredmagazineCover from "../work_assets/AR Magazine/WIRED.webp";
+import arComicVideo from "../work_assets/AR Comic/normalday.mov";
+import normaldayComic from "../work_assets/AR Comic/normaldaycomic.png";
+
+import ambassawebsteCS from "../work_assets/AmbassaWebsite/AMBASSAWEBSITE FINAL CASE STUDY.jpg";
 
 const WorkPage = () => {
   const [openModalId, setOpenModalId] = useState(null);
@@ -44,6 +60,142 @@ const WorkPage = () => {
 
   /* -------------------- DATA -------------------- */
   const workItems = [
+    {
+      id: "15",
+      title: "Normal Day: AR Comic",
+      date: "March 2025",
+      image: require("../work_assets/icons/ar_comic_icon.avif"),
+      badge: require("../assets/categorybadges/xrbadge.png"),
+      tags: ["photography"],
+      children: (
+        <>
+          <ModalMiscGrid>
+            <video className="w-full max-w-4xl rounded-lg" controls>
+              <source src={arComicVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <img src={normaldayComic} alt="WIRED Magazine Cover" />
+          </ModalMiscGrid>
+          <DescriptionSection
+            tagline="The most normal day."
+            description="Utilizing my new lens studio skills. I decided to make a silly comic narrating the most 
+            'normal day' every experienced. When you hover over the panels of the comic strip, using the custom 
+            snapchat filter, youre thrown in the 3D world of the comic. Fit with sounds and motion, just to see what
+            its really like on the most normal day ever."
+            checkItOut={true}
+            link="https://www.snapchat.com/lens/2352ad444ccf44688085a95bd0f2f440?sender_web_id=73c0882b-89f8-495e-98d3-37685f079f9a&device_type=desktop&is_copy_url=true"
+          />
+          <SoftwareUsed
+            skills={
+              <>
+                <img
+                  src={threedmodelingSkill}
+                  alt="Photography"
+                  className="h-14"
+                />
+                <img
+                  src={motiondesignSkill}
+                  alt="Photography"
+                  className="h-14"
+                />
+              </>
+            }
+            software={
+              <>
+                <img
+                  src={lensstudioSoftware}
+                  alt="Adobe Illustrator"
+                  className="h-14 w-auto"
+                />
+                <img
+                  src={blenderSoftware}
+                  alt="Adobe Illustrator"
+                  className="h-14 w-auto"
+                />
+                <img
+                  src={adobeillustratorSoftware}
+                  alt="Adobe Illustrator"
+                  className="h-14 w-auto"
+                />
+              </>
+            }
+          />
+        </>
+      ),
+    },
+    {
+      id: "14",
+      title: "Wired: AR Magazine Cover",
+      date: "February 2025",
+      image: require("../work_assets/icons/ar_magazine_icon.avif"),
+      badge: require("../assets/categorybadges/xrbadge.png"),
+      tags: ["photography"],
+      children: (
+        <>
+          <ModalMiscGrid>
+            <video className="w-full max-w-4xl rounded-lg" controls>
+              <source src={arMagazineVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <img src={wiredmagazineCover} alt="WIRED Magazine Cover" />
+          </ModalMiscGrid>
+          <DescriptionSection
+            tagline="I created a 2D AR animated cover,"
+            description="for Wired magazine, utilizing Photoshop's rotoscoping and animating the
+             movement in Premiere Pro to push the boundaries of traditional magazine design. By integrating
+              augmented reality through a Snapchat lens, the static cover transforms into an interactive
+               experience, engaging readers with dynamic and eye-catching visuals."
+            checkItOut={true}
+            link="https://www.snapchat.com/lens/fa93ae4e2a344cc8babf518a20429762?locale=en_US&sid=f1ddc3d52e0a4a6f882403e6e5549e8c&share_id=OSpaWyywQxCVBLFooy5GMw&invite_id=sBJOmqO_"
+          />
+          <SoftwareUsed
+            skills={
+              <>
+                <img
+                  src={threedmodelingSkill}
+                  alt="Photography"
+                  className="h-14"
+                />
+                <img
+                  src={motiondesignSkill}
+                  alt="Photography"
+                  className="h-14"
+                />
+              </>
+            }
+            software={
+              <>
+                <img
+                  src={adobephotoshopSoftware}
+                  alt="Canon Rebel EOS T7"
+                  className="h-14 w-auto"
+                />
+                <img
+                  src={adobeaftereffectsSoftware}
+                  alt="Canon Rebel EOS T7"
+                  className="h-14 w-auto"
+                />
+                <img
+                  src={adobepremiereproSoftware}
+                  alt="Adobe Photoshop"
+                  className="h-14 w-auto"
+                />
+                <img
+                  src={lensstudioSoftware}
+                  alt="Adobe Illustrator"
+                  className="h-14 w-auto"
+                />
+                <img
+                  src={blenderSoftware}
+                  alt="Adobe Illustrator"
+                  className="h-14 w-auto"
+                />
+              </>
+            }
+          />
+        </>
+      ),
+    },
     {
       id: "1",
       title: "20 To 10",
@@ -337,7 +489,7 @@ const WorkPage = () => {
                   className="h-16"
                 />
                 <img
-                  src={programmingSkill}
+                  src={threedscanningSkill}
                   alt="Creative Directing"
                   className="h-16"
                 />
@@ -356,6 +508,11 @@ const WorkPage = () => {
                   alt="Polycam Software"
                   className="h-16"
                 />
+                <img
+                  src={metaquestSoftware}
+                  alt="Polycam Software"
+                  className="h-16"
+                />
               </>
             }
             language={
@@ -363,6 +520,11 @@ const WorkPage = () => {
                 <img src={htmlLanguage} alt="Photography" className="h-16" />
                 <img
                   src={csslLanguage}
+                  alt="Creative Directing"
+                  className="h-16"
+                />
+                <img
+                  src={csharpLanguage}
                   alt="Creative Directing"
                   className="h-16"
                 />
@@ -472,6 +634,19 @@ const WorkPage = () => {
               </>
             }
           />
+        </>
+      ),
+    },
+    {
+      id: "16",
+      title: "AmbassaWebsite",
+      date: "April 2024",
+      image: require("../work_assets/icons/Logo_NYU.png"),
+      badge: require("../assets/categorybadges/computerbadge.png"),
+      tags: ["photography"],
+      children: (
+        <>
+          <ModalWebDevGrid image={ambassawebsteCS} />
         </>
       ),
     },
