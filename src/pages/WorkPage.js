@@ -44,6 +44,8 @@ import arComicVideo from "../work_assets/AR Comic/normalday.mov";
 import normaldayComic from "../work_assets/AR Comic/normaldaycomic.png";
 
 import ambassawebsteCS from "../work_assets/AmbassaWebsite/AMBASSAWEBSITE FINAL CASE STUDY.jpg";
+import ajihomeCS from "../work_assets/Ajihome/AJIHOME FINAL CASE STUDY.jpg";
+import otwCS from "../work_assets/On Trail With/ON TRAIL WITH FINAL CASE STUDY.jpg";
 
 const WorkPage = () => {
   const [openModalId, setOpenModalId] = useState(null);
@@ -60,6 +62,32 @@ const WorkPage = () => {
 
   /* -------------------- DATA -------------------- */
   const workItems = [
+    {
+      id: "18",
+      title: "On Trail With",
+      date: "September 2025",
+      image: require("../work_assets/icons/otwicon.png"),
+      badge: require("../assets/categorybadges/computerbadge.png"),
+      tags: ["photography"],
+      children: (
+        <>
+          <ModalWebDevGrid image={otwCS} />
+        </>
+      ),
+    },
+    {
+      id: "17",
+      title: "Ajihome",
+      date: "July 2025",
+      image: require("../work_assets/icons/ajihomelogo.webp"),
+      badge: require("../assets/categorybadges/computerbadge.png"),
+      tags: ["photography"],
+      children: (
+        <>
+          <ModalWebDevGrid image={ajihomeCS} />
+        </>
+      ),
+    },
     {
       id: "15",
       title: "Normal Day: AR Comic",
